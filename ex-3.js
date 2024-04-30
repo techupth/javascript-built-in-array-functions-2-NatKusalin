@@ -1,3 +1,4 @@
+//ex-3
 const bills = [
   {
     id: "1",
@@ -374,4 +375,13 @@ const bills = [
 ];
 
 // Start coding here
-const billMembers;
+
+const billMembers = bills
+  .filter((bill) => {
+    return bill.member !== null;
+  })
+  .map((bill) => {
+    return bill.member.name;
+  });
+
+console.log("billMembers: ", billMembers);
