@@ -1,3 +1,4 @@
+//ex-2
 const bills = [
   {
     id: "1",
@@ -375,4 +376,8 @@ const bills = [
 
 // Start coding here
 
-const newBills;
+const newBills = bills.filter((bill) => {
+  return bill.member !== null;
+});
+
+console.log("newBills: ", newBills);
